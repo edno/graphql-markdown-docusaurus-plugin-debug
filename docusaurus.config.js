@@ -32,7 +32,7 @@ const config = {
     locales: ['en'],
   },
 
-  plugins:[["plugin-bug", { id: "bug", path: "api", rootBasePath: "api"}]],
+  plugins: [["plugin-bug", { id: "bug", path: "api", includeCurrentVersion: true }]],
 
   presets: [
     [

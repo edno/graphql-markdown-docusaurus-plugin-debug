@@ -57,7 +57,7 @@ const validateOptions = ({
 }) => {
   const userOptions = options;
 
-  userOptions.id = options.id ? options.id : DEFAULT_ID;
+  userOptions.id = typeof options.id !== "undefined" ? options.id : DEFAULT_ID;
 
   if (!validateOptionPlugin) {
     return userOptions;

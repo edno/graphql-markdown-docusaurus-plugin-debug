@@ -1,4 +1,4 @@
-const { pluginContentDocs } = require("./plugin-content-docs");
+const { pluginContentDocs, validateOptions } = require("./plugin-content-docs");
 
 const NAME = "docusaurus-graphql-doc-generator";
 
@@ -12,7 +12,7 @@ module.exports = async function pluginGraphQLMarkdown(
   ));
 
   const loadContent = async () => {
-    return docsPluginInstance.loadContents();
+    return docsPluginInstance.loadContent();
   };
 
   return {
@@ -21,3 +21,5 @@ module.exports = async function pluginGraphQLMarkdown(
     loadContent,
   }
 }
+
+module.exports.validateOptions = validateOptions;

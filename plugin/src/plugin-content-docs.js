@@ -1,10 +1,8 @@
 const PluginContentDocs = require("@docusaurus/plugin-content-docs");
 
-const plugin = PluginContentDocs;
-
-const pluginContentDocs = plugin.default ? plugin.default : plugin;
-const validateOptions = plugin.default?.validateOptions
-  ? plugin.default.validateOptions
-  : plugin.validateOptions;
+const pluginContentDocs = PluginContentDocs.default ? PluginContentDocs.default : PluginContentDocs;
+const validateOptions = PluginContentDocs.default?.validateOptions
+  ? PluginContentDocs.default.validateOptions
+  : PluginContentDocs.validateOptions;
 
 module.exports = { pluginContentDocs, validateOptions };
