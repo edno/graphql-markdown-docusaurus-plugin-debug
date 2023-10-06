@@ -32,7 +32,7 @@ const config = {
     locales: ['en'],
   },
 
-  plugins: [["plugin-bug", { id: "bug", path: "api", includeCurrentVersion: true }]],
+  plugins: [["plugin-bug", { id: "bug", path: "api", includeCurrentVersion: true, routeBasePath: "api" }]],
 
   presets: [
     [
@@ -78,7 +78,7 @@ const config = {
             position: 'left',
             label: 'Tutorial',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          { to: '/blog', label: 'Blog', position: 'left' },
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
